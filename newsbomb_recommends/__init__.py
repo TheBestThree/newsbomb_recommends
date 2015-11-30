@@ -7,7 +7,12 @@ def main(global_config, **settings):
     config = Configurator(settings=settings)
     config.include('pyramid_chameleon')
     config.include('pyramid_chameleon')
+
     config.add_static_view('static', 'static', cache_max_age=3600)
+
+    config.add_route('generic', 'generic/{module}/{method}')
+    config.add_route('qiniu_uptoken', 'qiniu_uptoken')
     config.add_route('home', '/')
+
     config.scan()
     return config.make_wsgi_app()
