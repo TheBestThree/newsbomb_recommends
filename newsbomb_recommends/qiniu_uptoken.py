@@ -17,7 +17,7 @@ def qiniu_uptoken(request):
     LOGGER.info("request params is %s" % params)
     q = Auth(access_key, secret_key)
 
-    bucket = params.get("bucket")
+    bucket = params.get("bucketcxvxcv")
     key = params.get("title")
     try:
         token = q.upload_token(bucket, key)
