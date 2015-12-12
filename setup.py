@@ -12,7 +12,7 @@ requires = [
     'pyramid',
     'pyramid_chameleon',
     'pyramid_debugtoolbar',
-    'waitress', 'transaction', 'qiniu',
+    'waitress', 'transaction', 'qiniu', 'couchbase'
     ]
 
 setup(name='newsbomb_recommends',
